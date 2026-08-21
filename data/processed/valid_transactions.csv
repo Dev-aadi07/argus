@@ -1,0 +1,11 @@
+order_id,customer_id,product_id,order_date,quantity,unit_price,discount,region,payment_method,is_valid,issues
+10001,C001,P001,2026-01-01,2,799.0,0.05,South,UPI,True,
+10002,C002,P002,2026-01-01,1,1299.0,0.0,East,Card,True,
+10003,C003,P003,2026-01-02,3,499.0,0.1,North,UPI,True,
+10004,C001,P004,2026-01-02,1,2499.0,0.05,South,Card,True,
+10005,C004,P002,2026-01-03,2,1299.0,0.0,West,UPI,True,
+10006,C005,P005,2026-01-03,5,199.0,0.15,South,Cash,True,
+10007,C002,P001,2026-01-04,1,799.0,0.0,East,UPI,True,
+10008,C006,P003,2026-01-04,2,499.0,0.05,North,Card,True,
+10009,C003,P006,2026-01-05,1,3499.0,0.0,North,UPI,True,
+10010,C007,P004,2026-01-05,1,2499.0,0.1,West,Card,True,

@@ -1,0 +1,6 @@
+order_id,customer_id,product_id,order_date,quantity,unit_price,discount,region,payment_method,is_valid,issues
+10011,C008,P007,2026-01-06,-2,599.0,0.05,South,UPI,False,negative_quantity
+10012,C009,P008,not-a-date,1,899.0,0.0,East,Card,False,invalid_date
+10013,C010,P009,2026-01-07,1,-500.0,0.1,North,UPI,False,"duplicate_order, negative_price"
+10013,C010,P009,2026-01-07,1,-500.0,0.1,North,UPI,False,"duplicate_order, negative_price"
+10014,C011,P010,2026-01-08,1,,0.05,West,Card,False,missing_unit_price
