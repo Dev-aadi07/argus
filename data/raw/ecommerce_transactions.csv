@@ -9,3 +9,8 @@ order_id,customer_id,product_id,order_date,quantity,unit_price,discount,region,p
 10008,C006,P003,2026-01-04,2,499,0.05,North,Card
 10009,C003,P006,2026-01-05,1,3499,0.00,North,UPI
 10010,C007,P004,2026-01-05,1,2499,0.10,West,Card
+10011,C008,P007,2026-01-06,-2,599,0.05,South,UPI
+10012,C009,P008,not-a-date,1,899,0.00,East,Card
+10013,C010,P009,2026-01-07,1,-500,0.10,North,UPI
+10013,C010,P009,2026-01-07,1,-500,0.10,North,UPI
+10014,C011,P010,2026-01-08,1,,0.05,West,Card
