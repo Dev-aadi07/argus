@@ -32,12 +32,13 @@ def load_transactions(data: pd.DataFrame) -> int:
             :region,
             :payment_method
         )
+        ON CONFLICT (order_id) DO NOTHING
     """)
 
     with engine.begin() as connection:
-        connection.execute(insert_query, records)
+        result = connection.execute(insert_query, records)
 
-    return len(records)
+    return result.rowcount
 
 
 def log_ingestion(

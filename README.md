@@ -1,27 +1,59 @@
 # ARGUS
 
-ARGUS is an AI-powered data intelligence system that analyzes continuously changing data to detect anomalies, identify patterns, make predictions, and explain its findings.
+ARGUS is a data intelligence system designed to ingest, validate, store, analyze, and eventually learn from continuously changing datasets.
+
+The project is being built incrementally as a real data/AI engineering system.
+
+---
 
 ## Current Status
 
-Phase 0 — Project Bootstrap
+### Phase 2 — PostgreSQL Data Layer ✅
 
-## Tech Stack
+ARGUS currently supports:
 
-- Python
-- PostgreSQL
-- Pandas
-- NumPy
-- SQLAlchemy
+- CSV data ingestion
+- Data-quality validation
+- Valid/invalid record separation
+- PostgreSQL persistence
+- Ingestion history logging
+- Idempotent database ingestion
+- SQL-based analytics
+- Database indexes
+- Automated pipeline tests
 
-## Roadmap
+---
 
-- Data ingestion
-- Data storage
-- Data processing
-- Data analysis
-- Anomaly detection
-- Forecasting
-- Explainability
-- API
-- Production deployment
+## Architecture
+
+```text
+                         ARGUS
+                           │
+                           ▼
+                    ┌────────────┐
+                    │ CSV SOURCE │
+                    └──────┬─────┘
+                           │
+                           ▼
+                     INGESTION
+                           │
+                           ▼
+                     VALIDATION
+                           │
+                    ┌──────┴──────┐
+                    ▼             ▼
+                  VALID         INVALID
+                    │             │
+                    ▼             ▼
+              PostgreSQL      Quarantine
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+   transactions         ingestion_logs
+          │
+          ▼
+     SQL ANALYTICS
+          │
+    ┌─────┼─────┐
+    ▼     ▼     ▼
+ REGION PRODUCT PAYMENT

@@ -37,7 +37,7 @@ def main():
     # 4. Load valid records into PostgreSQL
     inserted = load_transactions(valid_data)
 
-    print(f"\nInserted {inserted} transactions into PostgreSQL.")
+    print(f"Inserted {inserted} new transactions into PostgreSQL.")
 
     # 5. Log ingestion
     log_ingestion(
