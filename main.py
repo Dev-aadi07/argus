@@ -1,67 +1,58 @@
+from datetime import datetime
+
 from src.ingestion.csv_ingestion import load_csv
 from src.processing.validator import validate_data
-from src.processing.data_processor import (
-    separate_data,
-    save_processed_data,
+from src.processing.data_processor import separate_data
+from src.processing.database_loader import (
+    load_transactions,
+    log_ingestion,
 )
 
 
-def main():
+DATA_PATH = "data/raw/ecommerce_transactions.csv"
 
+
+def main():
     print("================================")
     print("          ARGUS STARTING")
     print("================================")
 
-    # -------------------------
-    # 1. INGESTION
-    # -------------------------
+    # 1. Ingestion
+    data, metadata = load_csv(DATA_PATH)
 
-    data, metadata = load_csv(
-        "data/raw/ecommerce_transactions.csv"
-    )
-
-    print("\n[1] DATA INGESTION")
-    print(f"Records received: {metadata['rows']}")
+    print(f"\nRows received: {metadata['rows']}")
     print(f"Columns received: {metadata['columns']}")
 
-    # -------------------------
-    # 2. VALIDATION
-    # -------------------------
-
+    # 2. Validation
     validated_data, report = validate_data(data)
 
-    print("\n[2] DATA VALIDATION")
+    print("\nData quality:")
     print(f"Valid records: {report['valid_records']}")
     print(f"Invalid records: {report['invalid_records']}")
     print(f"Quality score: {report['quality_score']}%")
 
-    # -------------------------
-    # 3. SEPARATION
-    # -------------------------
+    # 3. Separate valid and invalid data
+    valid_data, invalid_data = separate_data(validated_data)
 
-    valid_data, invalid_data = separate_data(
-        validated_data
+    # 4. Load valid records into PostgreSQL
+    inserted = load_transactions(valid_data)
+
+    print(f"\nInserted {inserted} transactions into PostgreSQL.")
+
+    # 5. Log ingestion
+    log_ingestion(
+        source=metadata["source"],
+        ingested_at=datetime.now().isoformat(),
+        rows_received=report["total_records"],
+        columns_received=metadata["columns"],
+        valid_records=report["valid_records"],
+        invalid_records=report["invalid_records"],
+        quality_score=report["quality_score"],
     )
 
-    print("\n[3] DATA SEPARATION")
-    print(f"Processed records: {len(valid_data)}")
-    print(f"Quarantined records: {len(invalid_data)}")
-
-    # -------------------------
-    # 4. SAVE
-    # -------------------------
-
-    processed_path, quarantine_path = save_processed_data(
-        valid_data,
-        invalid_data
-    )
-
-    print("\n[4] OUTPUT")
-    print(f"Processed data: {processed_path}")
-    print(f"Quarantined data: {quarantine_path}")
-
+    print("Ingestion logged successfully.")
     print("\n================================")
-    print("       ARGUS PIPELINE DONE")
+    print("          ARGUS COMPLETE")
     print("================================")
 
 
