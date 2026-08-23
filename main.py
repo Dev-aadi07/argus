@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from src.processing.pipeline import run_processing_pipeline
 from src.ingestion.csv_ingestion import load_csv
 from src.processing.validator import validate_data
 from src.processing.data_processor import separate_data
@@ -49,6 +49,10 @@ def main():
         invalid_records=report["invalid_records"],
         quality_score=report["quality_score"],
     )
+    
+    print("\nStarting processing pipeline...")
+
+    run_processing_pipeline()
 
     print("Ingestion logged successfully.")
     print("\n================================")
