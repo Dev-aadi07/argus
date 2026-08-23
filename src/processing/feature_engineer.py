@@ -7,7 +7,7 @@ def engineer_features(data: pd.DataFrame) -> pd.DataFrame:
     # Average value of each unit after discount
     features["net_unit_price"] = (
         features["net_amount"] / features["quantity"]
-    )
+    ).round(2)
 
     # Categorize transaction size
     features["transaction_size"] = pd.cut(

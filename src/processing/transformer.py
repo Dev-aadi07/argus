@@ -5,17 +5,17 @@ def transform_transactions(data: pd.DataFrame) -> pd.DataFrame:
     transformed = data.copy()
 
     transformed["gross_amount"] = (
-        transformed["quantity"] * transformed["unit_price"]
-    )
+    transformed["quantity"] * transformed["unit_price"]
+    ).round(2)
 
     transformed["discount_amount"] = (
         transformed["gross_amount"] * transformed["discount"]
-    )
+    ).round(2)
 
     transformed["net_amount"] = (
         transformed["gross_amount"]
         - transformed["discount_amount"]
-    )
+    ).round(2)
 
     return transformed
 
