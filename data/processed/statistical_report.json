@@ -1,0 +1,344 @@
+{
+    "dataset": {
+        "rows": 10,
+        "columns": 17
+    },
+    "profile": [
+        {
+            "index": "order_id",
+            "count": 10.0,
+            "mean": 10005.5,
+            "std": 3.0276503540974917,
+            "min": 10001.0,
+            "25%": 10003.25,
+            "50%": 10005.5,
+            "75%": 10007.75,
+            "max": 10010.0,
+            "median": 10005.5,
+            "missing_values": 0
+        },
+        {
+            "index": "quantity",
+            "count": 10.0,
+            "mean": 1.9,
+            "std": 1.286683937707919,
+            "min": 1.0,
+            "25%": 1.0,
+            "50%": 1.5,
+            "75%": 2.0,
+            "max": 5.0,
+            "median": 1.5,
+            "missing_values": 0
+        },
+        {
+            "index": "unit_price",
+            "count": 10.0,
+            "mean": 1389.0,
+            "std": 1086.7382389517727,
+            "min": 199.0,
+            "25%": 574.0,
+            "50%": 1049.0,
+            "75%": 2199.0,
+            "max": 3499.0,
+            "median": 1049.0,
+            "missing_values": 0
+        },
+        {
+            "index": "discount",
+            "count": 10.0,
+            "mean": 0.05,
+            "std": 0.05270462766947299,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.05,
+            "75%": 0.08750000000000001,
+            "max": 0.15,
+            "median": 0.05,
+            "missing_values": 0
+        },
+        {
+            "index": "gross_amount",
+            "count": 10.0,
+            "mean": 1828.1,
+            "std": 892.5341512295824,
+            "min": 799.0,
+            "25%": 1073.25,
+            "50%": 1547.5,
+            "75%": 2499.0,
+            "max": 3499.0,
+            "median": 1547.5,
+            "missing_values": 0
+        },
+        {
+            "index": "discount_amount",
+            "count": 10.0,
+            "mean": 80.35999999999999,
+            "std": 86.3100927534614,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 64.9,
+            "75%": 143.175,
+            "max": 249.9,
+            "median": 64.9,
+            "missing_values": 0
+        },
+        {
+            "index": "net_amount",
+            "count": 10.0,
+            "mean": 1747.7400000000002,
+            "std": 894.49251341504,
+            "min": 799.0,
+            "25%": 1035.825,
+            "50%": 1432.6999999999998,
+            "75%": 2342.8125,
+            "max": 3499.0,
+            "median": 1432.6999999999998,
+            "missing_values": 0
+        },
+        {
+            "index": "net_unit_price",
+            "count": 10.0,
+            "mean": 1337.0500000000002,
+            "std": 1059.6081049666952,
+            "min": 169.15,
+            "25%": 545.3,
+            "50%": 1049.0,
+            "75%": 2011.5749999999998,
+            "max": 3499.0,
+            "median": 1049.0,
+            "missing_values": 0
+        },
+        {
+            "index": "order_year",
+            "count": 10.0,
+            "mean": 2026.0,
+            "std": 0.0,
+            "min": 2026.0,
+            "25%": 2026.0,
+            "50%": 2026.0,
+            "75%": 2026.0,
+            "max": 2026.0,
+            "median": 2026.0,
+            "missing_values": 0
+        },
+        {
+            "index": "order_month",
+            "count": 10.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "25%": 1.0,
+            "50%": 1.0,
+            "75%": 1.0,
+            "max": 1.0,
+            "median": 1.0,
+            "missing_values": 0
+        },
+        {
+            "index": "order_day",
+            "count": 10.0,
+            "mean": 3.0,
+            "std": 1.4907119849998598,
+            "min": 1.0,
+            "25%": 2.0,
+            "50%": 3.0,
+            "75%": 4.0,
+            "max": 5.0,
+            "median": 3.0,
+            "missing_values": 0
+        }
+    ],
+    "distributions": {
+        "quantity": {
+            "mean": 1.9,
+            "median": 1.5,
+            "std": 1.29,
+            "min": "1",
+            "max": "5",
+            "skewness": 1.79
+        },
+        "unit_price": {
+            "mean": 1389.0,
+            "median": 1049.0,
+            "std": 1086.74,
+            "min": 199.0,
+            "max": 3499.0,
+            "skewness": 0.93
+        },
+        "discount": {
+            "mean": 0.05,
+            "median": 0.05,
+            "std": 0.05,
+            "min": 0.0,
+            "max": 0.15,
+            "skewness": 0.71
+        },
+        "gross_amount": {
+            "mean": 1828.1,
+            "median": 1547.5,
+            "std": 892.53,
+            "min": 799.0,
+            "max": 3499.0,
+            "skewness": 0.64
+        },
+        "discount_amount": {
+            "mean": 80.36,
+            "median": 64.9,
+            "std": 86.31,
+            "min": 0.0,
+            "max": 249.9,
+            "skewness": 0.76
+        },
+        "net_amount": {
+            "mean": 1747.74,
+            "median": 1432.7,
+            "std": 894.49,
+            "min": 799.0,
+            "max": 3499.0,
+            "skewness": 0.79
+        },
+        "net_unit_price": {
+            "mean": 1337.05,
+            "median": 1049.0,
+            "std": 1059.61,
+            "min": 169.15,
+            "max": 3499.0,
+            "skewness": 1.01
+        }
+    },
+    "correlations": {
+        "quantity": {
+            "quantity": 1.0,
+            "unit_price": -0.6444,
+            "discount": 0.7373,
+            "gross_amount": -0.4146,
+            "discount_amount": 0.3031,
+            "net_amount": -0.4429,
+            "net_unit_price": -0.646
+        },
+        "unit_price": {
+            "quantity": -0.6444,
+            "unit_price": 1.0,
+            "discount": -0.3395,
+            "gross_amount": 0.8891,
+            "discount_amount": 0.0162,
+            "net_amount": 0.8855,
+            "net_unit_price": 0.9976
+        },
+        "discount": {
+            "quantity": 0.7373,
+            "unit_price": -0.3395,
+            "discount": 1.0,
+            "gross_amount": -0.2609,
+            "discount_amount": 0.8526,
+            "net_amount": -0.3426,
+            "net_unit_price": -0.3839
+        },
+        "gross_amount": {
+            "quantity": -0.4146,
+            "unit_price": 0.8891,
+            "discount": -0.2609,
+            "gross_amount": 1.0,
+            "discount_amount": 0.0256,
+            "net_amount": 0.9953,
+            "net_unit_price": 0.8907
+        },
+        "discount_amount": {
+            "quantity": 0.3031,
+            "unit_price": 0.0162,
+            "discount": 0.8526,
+            "gross_amount": 0.0256,
+            "discount_amount": 1.0,
+            "net_amount": -0.0709,
+            "net_unit_price": -0.0474
+        },
+        "net_amount": {
+            "quantity": -0.4429,
+            "unit_price": 0.8855,
+            "discount": -0.3426,
+            "gross_amount": 0.9953,
+            "discount_amount": -0.0709,
+            "net_amount": 1.0,
+            "net_unit_price": 0.8933
+        },
+        "net_unit_price": {
+            "quantity": -0.646,
+            "unit_price": 0.9976,
+            "discount": -0.3839,
+            "gross_amount": 0.8907,
+            "discount_amount": -0.0474,
+            "net_amount": 0.8933,
+            "net_unit_price": 1.0
+        }
+    },
+    "outliers": {
+        "column": "net_amount",
+        "count": 0,
+        "order_ids": []
+    },
+    "baseline": {
+        "quantity": {
+            "mean": 1.9,
+            "median": 1.5,
+            "std": 1.29,
+            "q1": 1.0,
+            "q3": 2.0,
+            "min": "1",
+            "max": "5"
+        },
+        "unit_price": {
+            "mean": 1389.0,
+            "median": 1049.0,
+            "std": 1086.74,
+            "q1": 574.0,
+            "q3": 2199.0,
+            "min": 199.0,
+            "max": 3499.0
+        },
+        "discount": {
+            "mean": 0.05,
+            "median": 0.05,
+            "std": 0.05,
+            "q1": 0.0,
+            "q3": 0.09,
+            "min": 0.0,
+            "max": 0.15
+        },
+        "gross_amount": {
+            "mean": 1828.1,
+            "median": 1547.5,
+            "std": 892.53,
+            "q1": 1073.25,
+            "q3": 2499.0,
+            "min": 799.0,
+            "max": 3499.0
+        },
+        "discount_amount": {
+            "mean": 80.36,
+            "median": 64.9,
+            "std": 86.31,
+            "q1": 0.0,
+            "q3": 143.18,
+            "min": 0.0,
+            "max": 249.9
+        },
+        "net_amount": {
+            "mean": 1747.74,
+            "median": 1432.7,
+            "std": 894.49,
+            "q1": 1035.82,
+            "q3": 2342.81,
+            "min": 799.0,
+            "max": 3499.0
+        },
+        "net_unit_price": {
+            "mean": 1337.05,
+            "median": 1049.0,
+            "std": 1059.61,
+            "q1": 545.3,
+            "q3": 2011.57,
+            "min": 169.15,
+            "max": 3499.0
+        }
+    }
+}
